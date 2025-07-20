@@ -11,3 +11,7 @@ class IncreamentQantityEvent extends QuantityEvent{
 class DecreamentQuantityEvent extends QuantityEvent{
   const DecreamentQuantityEvent();
 }
+class onAddressEvent extends QuantityEvent{
+  final String address;
+  const onAddressEvent({required this.address});
+}
