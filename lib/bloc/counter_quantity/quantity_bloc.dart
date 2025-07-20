@@ -11,7 +11,9 @@ class QuantityBloc extends Bloc<QuantityEvent,QuantityState>{
       if(state.count>1){
         emit(QuantityState(count: state.count-1));
       }
-});
-
+      });
+      on<onAddressEvent>((event, emit) {
+      emit(HomeAddressState(count: 0,address:event.address));
+      },);
     }
 }
